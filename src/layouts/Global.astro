@@ -7,18 +7,27 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="DeadByBot site" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<nav>
+			<li><a href="/">Accueil</a></li>
+			<li><a href="/">DeadByBot</a></li>
+			<li><a href="/">Documentation API</a></li>
+			<li><a href="/">A propos</a></li>
+		</nav>
 	</body>
+	<slot />
+	<footer>
+		<p>DeadByBot - Community</p>
+	</footer>
 </html>
 <style is:global>
 	:root {
